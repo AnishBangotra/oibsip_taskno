@@ -4,6 +4,6 @@ export const connectDB = () => {
     mongoose.connect(process.env.MONGO_URI, {
     dbName: "backendApi",
 })
-.then(()=> console.log("Database connection established"))
+.then((c)=> console.log(`Database connected with ${c.connection.host}`))
 .catch((err) => console.error(err));
 };
