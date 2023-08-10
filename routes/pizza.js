@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/add',isAdmin, addPizza);
 router.get('/myPizza', isAdmin, getPizza);
-router.get('/menu', isAuthenticated, getAllPizzas);
+router.get('/menu', getAllPizzas);
 
 router.route("/:id").delete(isAdmin, deletePizza);
 export default router;
