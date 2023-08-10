@@ -30,6 +30,14 @@ export const getPizza = async (req, res) => {
     });
 };
 
+export const getAllPizzas = async (req, res) => {
+    const pizzas = await Pizza.find();
+    res.status(200).json({
+        success: true,
+        data: pizzas
+    });
+};
+
 // export const updatePizza  = async (req, res) => {
 //     const { id } = req.params;
 //     const pizza = await Pizza.findById(id);
