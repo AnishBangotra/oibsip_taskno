@@ -10,5 +10,6 @@ export const sendCookie = (user, res, message, statusCode) => {
     }).json({
         success: true,
         message,
+        data: user
     }) 
 };
